@@ -199,8 +199,9 @@ namespace QBitNinja
 		{
 			var conf = new QBitNinjaConfiguration
 			{
-				Indexer = IndexerConfiguration.FromConfiguration(new ConfigurationManagerConfiguration()),
-				LocalChain = ConfigurationManager.AppSettings["LocalChain"],
+                // Indexer = IndexerConfiguration.FromConfiguration(new ConfigurationManagerConfiguration()),
+                Indexer = IndexerConfiguration.FromConfiguration(),
+                LocalChain = ConfigurationManager.AppSettings["LocalChain"],
 				ServiceBus = ConfigurationManager.AppSettings["ServiceBus"]
 			};
 			conf.CoinbaseMaturity = conf.Indexer.Network.Consensus.CoinbaseMaturity;
